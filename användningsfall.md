@@ -23,7 +23,7 @@ Alternativt scenario:
 
 Om användaren väljer att avbryta spelet innan det är slut, kan de stänga ner applikationen eller välja att starta en ny omgång.
 
-
+--------------------------
 Förslag på enhetstester
 
 WordGeneratorTest: Testa att WordGenerator-klassen kan läsa in en ordlista och generera ett slumpmässigt ord korrekt.
