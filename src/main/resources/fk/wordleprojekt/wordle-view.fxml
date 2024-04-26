@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="844.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fk.wordleprojekt.controllers.WordleController">
+
+   <HBox alignment="CENTER" prefHeight="80.0" prefWidth="200.0">
+      <children>
+         <Label alignment="CENTER" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+         <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+         <Label alignment="CENTER" layoutX="90.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+         <Label alignment="CENTER" layoutX="170.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+         <Label alignment="CENTER" layoutX="250.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+      </children>
+   </HBox>
+   <HBox alignment="CENTER" layoutX="30.0" layoutY="161.0" prefHeight="80.0" prefWidth="200.0">
+      <children>
+         <Label alignment="CENTER" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+         <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+         <Label alignment="CENTER" layoutX="90.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+         <Label alignment="CENTER" layoutX="170.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+         <Label alignment="CENTER" layoutX="250.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+      </children>
+   </HBox>
+   <HBox alignment="CENTER" layoutX="30.0" layoutY="221.0" prefHeight="80.0" prefWidth="200.0">
+      <children>
+         <Label alignment="CENTER" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+         <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+         <Label alignment="CENTER" layoutX="90.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+         <Label alignment="CENTER" layoutX="170.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+         <Label alignment="CENTER" layoutX="250.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+      </children>
+   </HBox>
+   <HBox alignment="CENTER" layoutX="30.0" layoutY="281.0" prefHeight="80.0" prefWidth="200.0">
+      <children>
+         <Label alignment="CENTER" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+         <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+         <Label alignment="CENTER" layoutX="90.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+         <Label alignment="CENTER" layoutX="170.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+         <Label alignment="CENTER" layoutX="250.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+      </children>
+   </HBox>
+   <HBox alignment="CENTER" layoutX="30.0" layoutY="316.0" prefHeight="80.0" prefWidth="200.0">
+      <children>
+         <Label alignment="CENTER" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+         <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+         <Label alignment="CENTER" layoutX="90.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+         <Label alignment="CENTER" layoutX="170.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+         <Label alignment="CENTER" layoutX="250.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+      </children>
+   </HBox>
+   <HBox alignment="CENTER" layoutX="30.0" layoutY="335.0" prefHeight="80.0" prefWidth="200.0">
+      <children>
+         <Label alignment="CENTER" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+         <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+         <Label alignment="CENTER" layoutX="90.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+         <Label alignment="CENTER" layoutX="170.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+         <Label alignment="CENTER" layoutX="250.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Label>
+      </children>
+   </HBox>
+   <VBox prefHeight="200.0" prefWidth="100.0" fx:id="buttonContainer">
+      <children>
+         <HBox id="Button_Row_1" alignment="CENTER" prefHeight="45.0" prefWidth="880.0">
+            <children>
+               <Button id="btn_q" mnemonicParsing="false" text="Q">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_w" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="W">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_e" layoutX="34.0" layoutY="10.0" mnemonicParsing="false" text="E">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_r" layoutX="57.0" layoutY="10.0" mnemonicParsing="false" text="R">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_t" layoutX="151.0" layoutY="10.0" mnemonicParsing="false" text="T">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_y" layoutX="200.0" layoutY="10.0" mnemonicParsing="false" text="Y">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_u" layoutX="253.0" layoutY="10.0" mnemonicParsing="false" text="U">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_i" layoutX="299.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="36.0" text="I">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_o" layoutX="348.0" layoutY="10.0" mnemonicParsing="false" text="O">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_p" layoutX="387.0" layoutY="10.0" mnemonicParsing="false" text="P">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_å" layoutX="438.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="35.0" text="Å">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+            </children>
+            <VBox.margin>
+               <Insets left="25.0" />
+            </VBox.margin>
+         </HBox>
+         <HBox id="Button_Row_2" alignment="CENTER" prefHeight="45.0" prefWidth="905.0">
+            <children>
+               <Button id="btn_a" mnemonicParsing="false" text="A">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_s" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="S">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_d" layoutX="58.0" layoutY="10.0" mnemonicParsing="false" text="D">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_f" layoutX="103.0" layoutY="10.0" mnemonicParsing="false" text="F">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_g" layoutX="152.0" layoutY="10.0" mnemonicParsing="false" text="G">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_h" layoutX="196.0" layoutY="10.0" mnemonicParsing="false" text="H">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_j" layoutX="245.0" layoutY="10.0" mnemonicParsing="false" text="J">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_k" layoutX="295.0" layoutY="10.0" mnemonicParsing="false" text="K">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_l" layoutX="336.0" layoutY="10.0" mnemonicParsing="false" text="L">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_ö" layoutX="382.0" layoutY="10.0" mnemonicParsing="false" text="Ö">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_ä" layoutX="426.0" layoutY="10.0" mnemonicParsing="false" text="Ä">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+            </children>
+         </HBox>
+         <HBox id="Button_Row_2" alignment="CENTER" prefHeight="45.0" prefWidth="200.0">
+            <children>
+               <Button id="btn_enter" mnemonicParsing="false" prefHeight="30.0" prefWidth="97.0" text="Enter">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="10.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_z" mnemonicParsing="false" text="Z">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_x" layoutX="495.0" layoutY="35.0" mnemonicParsing="false" text="X">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_c" layoutX="518.0" layoutY="35.0" mnemonicParsing="false" text="C">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_v" layoutX="541.0" layoutY="35.0" mnemonicParsing="false" text="V">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_b" layoutX="565.0" layoutY="35.0" mnemonicParsing="false" text="B">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_n" layoutX="589.0" layoutY="35.0" mnemonicParsing="false" text="N">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_m" layoutX="610.0" layoutY="35.0" mnemonicParsing="false" text="M">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets right="5.0" />
+                  </HBox.margin>
+               </Button>
+               <Button id="btn_erase" layoutX="633.0" layoutY="35.0" mnemonicParsing="false" text="⌫">
+                  <font>
+                     <Font name="Segoe UI Symbol" size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets left="5.0" />
+                  </HBox.margin>
+               </Button>
+            </children>
+            <VBox.margin>
+               <Insets bottom="20.0" />
+            </VBox.margin>
+         </HBox>
+      </children>
+   </VBox>
+   <padding>
+      <Insets left="10.0" />
+   </padding>
+</VBox>

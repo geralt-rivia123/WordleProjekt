@@ -6,4 +6,6 @@ module fk.wordleprojekt {
 
     opens fk.wordleprojekt to javafx.fxml;
     exports fk.wordleprojekt;
+    exports fk.wordleprojekt.controllers;
+    opens fk.wordleprojekt.controllers to javafx.fxml;
 }
