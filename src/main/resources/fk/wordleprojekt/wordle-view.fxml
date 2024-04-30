@@ -9,29 +9,29 @@
 
 <VBox alignment="CENTER" prefHeight="844.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fk.wordleprojekt.controllers.WordleController">
 
-   <HBox alignment="CENTER" prefHeight="80.0" prefWidth="200.0">
+   <HBox fx:id="labelRowRoundOne" alignment="CENTER" prefHeight="80.0" prefWidth="200.0">
       <children>
-         <Label alignment="CENTER" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
-         <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
-         <Label alignment="CENTER" layoutX="90.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" layoutX="90.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
-         <Label alignment="CENTER" layoutX="170.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" layoutX="170.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
-         <Label alignment="CENTER" layoutX="250.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" layoutX="250.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
@@ -40,27 +40,27 @@
    </HBox>
    <HBox alignment="CENTER" layoutX="30.0" layoutY="161.0" prefHeight="80.0" prefWidth="200.0">
       <children>
-         <Label alignment="CENTER" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
-         <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
-         <Label alignment="CENTER" layoutX="90.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" layoutX="90.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
-         <Label alignment="CENTER" layoutX="170.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" layoutX="170.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
-         <Label alignment="CENTER" layoutX="250.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" layoutX="250.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
@@ -69,27 +69,27 @@
    </HBox>
    <HBox alignment="CENTER" layoutX="30.0" layoutY="221.0" prefHeight="80.0" prefWidth="200.0">
       <children>
-         <Label alignment="CENTER" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
-         <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
-         <Label alignment="CENTER" layoutX="90.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" layoutX="90.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
-         <Label alignment="CENTER" layoutX="170.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" layoutX="170.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
-         <Label alignment="CENTER" layoutX="250.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" layoutX="250.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
@@ -98,27 +98,27 @@
    </HBox>
    <HBox alignment="CENTER" layoutX="30.0" layoutY="281.0" prefHeight="80.0" prefWidth="200.0">
       <children>
-         <Label alignment="CENTER" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
-         <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
-         <Label alignment="CENTER" layoutX="90.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" layoutX="90.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
-         <Label alignment="CENTER" layoutX="170.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" layoutX="170.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
-         <Label alignment="CENTER" layoutX="250.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" layoutX="250.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
@@ -127,27 +127,27 @@
    </HBox>
    <HBox alignment="CENTER" layoutX="30.0" layoutY="316.0" prefHeight="80.0" prefWidth="200.0">
       <children>
-         <Label alignment="CENTER" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
-         <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
-         <Label alignment="CENTER" layoutX="90.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" layoutX="90.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
-         <Label alignment="CENTER" layoutX="170.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" layoutX="170.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
-         <Label alignment="CENTER" layoutX="250.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" layoutX="250.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
@@ -156,34 +156,34 @@
    </HBox>
    <HBox alignment="CENTER" layoutX="30.0" layoutY="335.0" prefHeight="80.0" prefWidth="200.0">
       <children>
-         <Label alignment="CENTER" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
-         <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
-         <Label alignment="CENTER" layoutX="90.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" layoutX="90.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
-         <Label alignment="CENTER" layoutX="170.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" layoutX="170.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
-         <Label alignment="CENTER" layoutX="250.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;" text="Label">
+         <Label alignment="CENTER" layoutX="250.0" layoutY="10.0" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>
          </Label>
       </children>
    </HBox>
-   <VBox prefHeight="200.0" prefWidth="100.0" fx:id="buttonContainer">
+   <VBox fx:id="buttonContainer" prefHeight="200.0" prefWidth="100.0">
       <children>
          <HBox id="Button_Row_1" alignment="CENTER" prefHeight="45.0" prefWidth="880.0">
             <children>
@@ -374,7 +374,7 @@
          </HBox>
          <HBox id="Button_Row_2" alignment="CENTER" prefHeight="45.0" prefWidth="200.0">
             <children>
-               <Button id="btn_enter" mnemonicParsing="false" prefHeight="30.0" prefWidth="97.0" text="Enter">
+               <Button id="btn_enter" mnemonicParsing="false" prefHeight="30.0" prefWidth="97.0" text="Enter" fx:id="buttonEnter">
                   <font>
                      <Font size="18.0" />
                   </font>
@@ -438,7 +438,7 @@
                      <Insets right="5.0" />
                   </HBox.margin>
                </Button>
-               <Button id="btn_erase" layoutX="633.0" layoutY="35.0" mnemonicParsing="false" text="⌫">
+               <Button id="btn_erase" layoutX="633.0" layoutY="35.0" mnemonicParsing="false" text="⌫" fx:id="buttonErase">
                   <font>
                      <Font name="Segoe UI Symbol" size="18.0" />
                   </font>

@@ -2,8 +2,10 @@ package fk.wordleprojekt;
 
 import fk.wordleprojekt.controllers.WordleController;
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -17,6 +19,8 @@ public class WordleApplication extends Application {
         stage.setScene(scene);
         stage.show();
 
+        GameManager gameManager = GameManager.getInstance();
+        gameManager.setCurrentRound(0);
         WordleController controller = new WordleController();
 
 
