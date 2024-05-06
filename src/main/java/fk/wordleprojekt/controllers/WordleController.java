@@ -10,26 +10,41 @@ import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class WordleController {
-
-    private int curentLabelIndex;
     GameManager gameManager = GameManager.getInstance();
     @FXML
-    public VBox buttonContainer;
+    private VBox buttonContainer;
     @FXML
-    public HBox labelRowRoundOne;
+    private HBox labelRowRoundOne;
     @FXML
-    Button buttonErase;
+    private HBox labelRowRoundTwo;
     @FXML
-    Button buttonEnter;
+    private HBox labelRowRoundThree;
+    @FXML
+    private HBox labelRowRoundFour;
+    @FXML
+    private HBox labelRowRoundFive;
+    @FXML
+    private HBox labelRowRoundSix;
+
+    @FXML
+    private Button buttonErase;
+    @FXML
+    private Button buttonEnter;
 
     @FXML
     private void initialize() {
         addOnClickToButtons(getAllCharacterButtons());
         buttonErase.setOnAction(actionEvent ->
         {
-            erase();
+            eraseLabel();
+        });
+
+        buttonEnter.setOnAction(actionEvent ->
+        {
+            guess();
         });
     }
 
@@ -66,7 +81,8 @@ public class WordleController {
             button.setOnAction(actionEvent -> {
                 System.out.println(button.getText());
                 button.setStyle("-fx-background-color: red;");
-                getCurrentLabel().setText(button.getText());
+                //getCurrentLabel().setText(button.getText());
+                writeToLabel(button.getText());
             });
         }
     }
@@ -76,8 +92,24 @@ public class WordleController {
         HBox currentRow;
         switch (gameManager.getCurrentRound())
         {
-            case 1:  currentRow = labelRowRoundOne;
+            case 1: currentRow = labelRowRoundOne;
             break;
+
+            case 2: currentRow = labelRowRoundTwo;
+            break;
+
+            case 3: currentRow = labelRowRoundThree;
+            break;
+
+            case 4: currentRow = labelRowRoundFour;
+            break;
+
+            case 5: currentRow = labelRowRoundFive;
+            break;
+
+            case 6: currentRow = labelRowRoundSix;
+            break;
+
             default: currentRow = labelRowRoundOne;
             break;
         }
@@ -86,47 +118,59 @@ public class WordleController {
 
     }
 
-    private Label getCurrentLabel() {
-        Label currentLabel = (Label) getCurrentRow().getChildren().get(getCurrentLabelIndex());
-        currentLabel.setStyle("-fx-border-color: black; -fx-border-width: 2px; -fx-border-style: solid;");
-        return currentLabel;
+    private List<Label> getCurrentLabels() {
+        List<Label> labels = new ArrayList<>();
+        for ( Node node : getCurrentRow().getChildren()){
+            if (node instanceof Label label){
+                labels.add(label);
+            }
+
+        }
+        return labels;
     }
 
-    private int getCurrentLabelIndex() {
-        int currentLabelIndex = 0;
-        for (int i = 0; i < getCurrentRow().getChildren().size(); i++){
-            if(getCurrentRow().getChildren().get(i) instanceof Label label)
-                //Om rutan är tom eller det är den sista rutan
-                if(label.getText().isEmpty() || label.equals(getCurrentRow().getChildren().getLast())) {
-                    currentLabelIndex = i;
-                    System.out.println(currentLabelIndex);
-                    //Stoppa loopen om vi hittat rätt ruta
-                    break;
-                }
+    private void writeToLabel(String text) {
+
+        //Java Stream för att filtrera och hitta den första labeln utan text
+        Optional<Label> firstEmptyLabel = getCurrentLabels().stream()
+                .filter(label -> label.getText().isEmpty())
+        //Returnerar en Optional<Label> eftersom det inte garanteras att det finns en tom label i listan.
+                .findFirst();
+
+        // Kontrollera om en tom label hittades
+        if (firstEmptyLabel.isPresent()) {
+            Label emptyLabel = firstEmptyLabel.get();
+            emptyLabel.setText(text);
+            System.out.println("Första labeln utan text: " + emptyLabel);
+        } else {
+            System.out.println("Ingen label utan text hittades.");
         }
-        return currentLabelIndex;
     }
 
+    private void eraseLabel() {
+        Optional <Label> lastLabelWithText = getCurrentLabels().stream()
+                .filter(label -> !label.getText().isEmpty()) // Filter för label med text
+                //Hämta senaste
+                .reduce((first, second) -> second);
 
-
-    private void erase() {
-
-        Label labelToErase = null;
-        if(getCurrentLabelIndex() != 0)
-        {
-            labelToErase = (Label) getCurrentRow().getChildren().get(getCurrentLabelIndex() -1);
+        // Kontrollera om en label med text hittades
+        if (lastLabelWithText.isPresent()) {
+            Label labelWithText = lastLabelWithText.get();
+            labelWithText.setText("");
+            System.out.println("Sista labeln med text: " + getCurrentLabels().getLast().getText());
+        } else {
+            System.out.println("Ingen label med text hittades.");
         }
-        else if (getCurrentLabelIndex() == 4)
-        {
-            labelToErase = getCurrentLabel();
-        }
-
-        labelToErase.setText("");
-        labelToErase.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-border-style: solid;");
 
 
     }
 
-
-
+    private void guess() {
+        StringBuilder word = new StringBuilder();
+        for(Label label : getCurrentLabels()) {
+            word.append(label.getText());
+        }
+        System.out.println(word);
+        gameManager.setCurrentRound(gameManager.getCurrentRound() + 1);
+    }
 }

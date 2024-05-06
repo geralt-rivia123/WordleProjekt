@@ -38,7 +38,7 @@
          </Label>
       </children>
    </HBox>
-   <HBox alignment="CENTER" layoutX="30.0" layoutY="161.0" prefHeight="80.0" prefWidth="200.0">
+   <HBox fx:id="labelRowRoundTwo" alignment="CENTER" layoutX="30.0" layoutY="161.0" prefHeight="80.0" prefWidth="200.0">
       <children>
          <Label alignment="CENTER" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
@@ -67,7 +67,7 @@
          </Label>
       </children>
    </HBox>
-   <HBox alignment="CENTER" layoutX="30.0" layoutY="221.0" prefHeight="80.0" prefWidth="200.0">
+   <HBox fx:id="labelRowRoundThree" alignment="CENTER" layoutX="30.0" layoutY="221.0" prefHeight="80.0" prefWidth="200.0">
       <children>
          <Label alignment="CENTER" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
@@ -96,7 +96,7 @@
          </Label>
       </children>
    </HBox>
-   <HBox alignment="CENTER" layoutX="30.0" layoutY="281.0" prefHeight="80.0" prefWidth="200.0">
+   <HBox fx:id="labelRowRoundFour" alignment="CENTER" layoutX="30.0" layoutY="281.0" prefHeight="80.0" prefWidth="200.0">
       <children>
          <Label alignment="CENTER" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
@@ -125,7 +125,7 @@
          </Label>
       </children>
    </HBox>
-   <HBox alignment="CENTER" layoutX="30.0" layoutY="316.0" prefHeight="80.0" prefWidth="200.0">
+   <HBox fx:id="labelRowRoundFive" alignment="CENTER" layoutX="30.0" layoutY="316.0" prefHeight="80.0" prefWidth="200.0">
       <children>
          <Label alignment="CENTER" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>
@@ -154,7 +154,7 @@
          </Label>
       </children>
    </HBox>
-   <HBox alignment="CENTER" layoutX="30.0" layoutY="335.0" prefHeight="80.0" prefWidth="200.0">
+   <HBox fx:id="labelRowRoundSix" alignment="CENTER" layoutX="30.0" layoutY="335.0" prefHeight="80.0" prefWidth="200.0">
       <children>
          <Label alignment="CENTER" prefHeight="65.0" prefWidth="65.0" style="-fx-border-color: black;">
             <HBox.margin>

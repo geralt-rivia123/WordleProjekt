@@ -32,7 +32,7 @@ public class ButtonTest {
         // Mocka beteendet för buttonContainer
         when(buttonContainer.getChildren()).thenReturn(mockButtonContainer.getChildren());
         // Injicera den mockade buttonContainer i kontrollern
-        controller.buttonContainer = buttonContainer;
+        //controller.buttonContainer = buttonContainer;
     }
 
 

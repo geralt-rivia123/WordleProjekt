@@ -30,4 +30,8 @@ public class GameManager {
     public void setCurrentRound(int currentRound) {
         this.currentRound = currentRound;
     }
+
+    public void incrementCurrentRound() {
+        this.currentRound++;
+  ;  }
 }
