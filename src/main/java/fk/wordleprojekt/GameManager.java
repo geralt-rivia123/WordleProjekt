@@ -33,5 +33,12 @@ public class GameManager {
 
     public void incrementCurrentRound() {
         this.currentRound++;
-  ;  }
+    }
+
+    public void startNewGame() {
+        setCurrentRound(0);
+        WordGenerator wordGenerator = new WordGenerator();
+        wordGenerator.generateRandomWord();
+
+    }
 }

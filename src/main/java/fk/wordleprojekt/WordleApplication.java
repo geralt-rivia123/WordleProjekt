@@ -20,8 +20,8 @@ public class WordleApplication extends Application {
         stage.show();
 
         GameManager gameManager = GameManager.getInstance();
-        gameManager.setCurrentRound(1);
         WordleController controller = new WordleController();
+        gameManager.startNewGame();
 
 
 

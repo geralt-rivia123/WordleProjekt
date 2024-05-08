@@ -1,6 +1,8 @@
 package fk.wordleprojekt.controllers;
 
 import fk.wordleprojekt.GameManager;
+import fk.wordleprojekt.WordGenerator;
+import fk.wordleprojekt.WordGuesser;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
@@ -170,7 +172,9 @@ public class WordleController {
         for(Label label : getCurrentLabels()) {
             word.append(label.getText());
         }
-        System.out.println(word);
+        System.out.println("du gissade" + word);
+        System.out.println("rätt ord är " + WordGenerator.getGeneratedWord());
+        System.out.println(WordGuesser.guess(String.valueOf(word)));
         gameManager.setCurrentRound(gameManager.getCurrentRound() + 1);
     }
 }
