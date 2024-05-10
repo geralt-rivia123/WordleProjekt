@@ -33,6 +33,18 @@ public class WordGuesserTest {
 
         assertNotEquals(guess, WordGenerator.getGeneratedWord());
 
+    }
+
+    @Test
+    public void doesGuessExistInListTest() {
+        WordGenerator.readWordsFromFile(Paths.get(WordGenerator.getFilePath()));
+        List<String> wordList = WordGenerator.getWords();
+
+        String guess = "albin";
+
+        for(String word : wordList) {
+            assertNotEquals(guess, word);
+        }
 
     }
 

@@ -3,12 +3,14 @@ package fk.wordleprojekt.controllers;
 import fk.wordleprojekt.GameManager;
 import fk.wordleprojekt.WordGenerator;
 import fk.wordleprojekt.WordGuesser;
+import fk.wordleprojekt.exceptions.WordNotInListException;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.util.Pair;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,9 +38,11 @@ public class WordleController {
     @FXML
     private Button buttonEnter;
 
+    List<Button> buttons = new ArrayList<>();
+
     @FXML
     private void initialize() {
-        addOnClickToButtons(getAllCharacterButtons());
+        addOnClickToButtons();
         buttonErase.setOnAction(actionEvent ->
         {
             eraseLabel();
@@ -51,14 +55,7 @@ public class WordleController {
     }
 
 
-    @FXML
-    public void setRowVisibility(Boolean visbility) {
-        buttonContainer.setVisible(visbility);
-        addOnClickToButtons(getAllCharacterButtons());
-    }
-
-    public List<Button> getAllCharacterButtons() {
-        List<Button> buttons = new ArrayList<>();
+    private void setAllCharacterButtons() {
 
         for(Node node : buttonContainer.getChildren()){
             if(node instanceof HBox hBox) {
@@ -74,15 +71,17 @@ public class WordleController {
                 }
             }
         }
-        return buttons;
     }
 
-    private void addOnClickToButtons(List<Button> buttons) {
+    private void addOnClickToButtons() {
+
+        setAllCharacterButtons();
+
         for (Button button : buttons) {
             //Tilldelar knappen ett actionevent som skriver ut knappens bokstav när man klickar på den
             button.setOnAction(actionEvent -> {
                 System.out.println(button.getText());
-                button.setStyle("-fx-background-color: red;");
+                //button.setStyle("-fx-background-color: red;");
                 //getCurrentLabel().setText(button.getText());
                 writeToLabel(button.getText());
             });
@@ -143,6 +142,7 @@ public class WordleController {
         if (firstEmptyLabel.isPresent()) {
             Label emptyLabel = firstEmptyLabel.get();
             emptyLabel.setText(text);
+            emptyLabel.setStyle("-fx-border-width: 2px; " + "-fx-border-color: black;");
             System.out.println("Första labeln utan text: " + emptyLabel);
         } else {
             System.out.println("Ingen label utan text hittades.");
@@ -172,9 +172,180 @@ public class WordleController {
         for(Label label : getCurrentLabels()) {
             word.append(label.getText());
         }
-        System.out.println("du gissade" + word);
-        System.out.println("rätt ord är " + WordGenerator.getGeneratedWord());
-        System.out.println(WordGuesser.guess(String.valueOf(word)));
-        gameManager.setCurrentRound(gameManager.getCurrentRound() + 1);
+
+        try
+        {
+            WordGuesser.guess3(String.valueOf(word).toLowerCase());
+
+            for(String s : WordGuesser.getGreenCharacters())
+            {
+                System.out.println("GRÖN: " + s);
+            }
+
+            for(String s : WordGuesser.getYellowCharacters())
+            {
+                System.out.println("GUL: " + s);
+            }
+
+            for(String s : WordGuesser.getRedCharacters())
+            {
+                System.out.println("RÖD: " + s);
+            }
+
+
+            changeButtonColors();
+            changeLabelColors();
+
+            System.out.println("du gissade " + word);
+            System.out.println("rätt svar är "+ WordGenerator.getGeneratedWord());
+
+            gameManager.setCurrentRound(gameManager.getCurrentRound() + 1);
+        }
+        catch (WordNotInListException e) {
+            System.out.println(e.getMessage());
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+        for(Button button : buttons) {
+            for(String s : WordGuesser.greenCharacters2)
+            {
+                if(button.getText().equalsIgnoreCase(s)) {
+
+                    button.setStyle("-fx-background-color: green");
+                }
+            }
+
+            for(String s : WordGuesser.yellowCharacters2)
+            {
+                if(button.getText().equalsIgnoreCase(s)) {
+                    button.setStyle("-fx-background-color: yellow");
+                }
+            }
+
+            for(String s : WordGuesser.redCharacters2)
+            {
+                if(button.getText().equalsIgnoreCase(s)) {
+                    button.setStyle("-fx-background-color: red");
+                }
+            }
+        }
+
+
+
+        for(Label label : getCurrentLabels()) {
+            for(String s : WordGuesser.greenCharacters2)
+            {
+                if(label.getText().equalsIgnoreCase(s)) {
+
+                    label.setStyle("-fx-background-color: green");
+                }
+            }
+
+            for(String s : WordGuesser.yellowCharacters2)
+            {
+                if(label.getText().equalsIgnoreCase(s)) {
+                    label.setStyle("-fx-background-color: yellow");
+                }
+            }
+
+            for(String s : WordGuesser.redCharacters2)
+            {
+                if(label.getText().equalsIgnoreCase(s)) {
+                    label.setStyle("-fx-background-color: red");
+                }
+            }
+        }
+
+        WordGuesser.guess4(String.valueOf(word).toLowerCase());
+        for(String s : WordGuesser.greenCharacters2)
+        {
+            System.out.println("GRÖN: " + s);
+        }
+
+        for(String s : WordGuesser.yellowCharacters2)
+        {
+            System.out.println("GUL: " + s);
+        }
+
+        for(String s : WordGuesser.redCharacters2)
+        {
+            System.out.println("RÖD: " + s);
+        }
+
+ */
+
+
+
+    }
+
+    private void changeButtonColors() {
+        for(Button button : buttons) {
+            for(String s : WordGuesser.getGreenCharacters())
+            {
+                if(button.getText().equalsIgnoreCase(s)) {
+
+                    button.setStyle("-fx-background-color: green");
+                }
+            }
+
+            for(String s : WordGuesser.getYellowCharacters())
+            {
+                if(button.getText().equalsIgnoreCase(s)) {
+                    button.setStyle("-fx-background-color: yellow");
+                }
+            }
+
+            for(String s : WordGuesser.getRedCharacters())
+            {
+                if(button.getText().equalsIgnoreCase(s)) {
+                    button.setStyle("-fx-background-color: red");
+                }
+            }
+        }
+    }
+
+    private void changeLabelColors() {
+        for(Label label : getCurrentLabels()) {
+            for(String s : WordGuesser.getGreenCharacters())
+            {
+                if(label.getText().equalsIgnoreCase(s)) {
+
+                    label.setStyle("-fx-background-color: green");
+                }
+            }
+
+            for(String s : WordGuesser.getYellowCharacters())
+            {
+                if(label.getText().equalsIgnoreCase(s)) {
+                    label.setStyle("-fx-background-color: yellow");
+                }
+            }
+
+            for(String s : WordGuesser.getRedCharacters())
+            {
+                if(label.getText().equalsIgnoreCase(s)) {
+                    label.setStyle("-fx-background-color: red");
+                }
+            }
+        }
+
     }
 }

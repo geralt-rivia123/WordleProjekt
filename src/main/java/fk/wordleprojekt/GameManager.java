@@ -36,7 +36,7 @@ public class GameManager {
     }
 
     public void startNewGame() {
-        setCurrentRound(0);
+        setCurrentRound(1);
         WordGenerator wordGenerator = new WordGenerator();
         wordGenerator.generateRandomWord();
 

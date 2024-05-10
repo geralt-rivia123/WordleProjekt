@@ -37,11 +37,11 @@ public class WordGenerator {
         randomWord = words.get(randomIndex);
     }
 
-    public List<String> getWords() {
+    public static List<String> getWords() {
         return words;
     }
 
-    public String getFilePath() {
+    public static String getFilePath() {
         return filePath;
     }
 

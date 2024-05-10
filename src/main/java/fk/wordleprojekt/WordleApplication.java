@@ -22,6 +22,7 @@ public class WordleApplication extends Application {
         GameManager gameManager = GameManager.getInstance();
         WordleController controller = new WordleController();
         gameManager.startNewGame();
+        System.out.println(WordGenerator.getGeneratedWord());
 
 
 
