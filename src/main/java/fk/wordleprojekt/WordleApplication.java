@@ -24,8 +24,6 @@ public class WordleApplication extends Application {
         gameManager.startNewGame();
         System.out.println(WordGenerator.getGeneratedWord());
 
-
-
     }
 
     public static void main(String[] args) {

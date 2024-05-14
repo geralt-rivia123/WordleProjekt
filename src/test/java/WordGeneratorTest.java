@@ -1,25 +1,21 @@
 import fk.wordleprojekt.WordGenerator;
 import org.junit.jupiter.api.Test;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class WordGeneratorTest {
-    WordGenerator wordGenerator = new WordGenerator();
 
     @Test
     public void readWordListTest() {
-        Path path = Paths.get(wordGenerator.getFilePath());
+        Path path = Paths.get(WordGenerator.getFilePath());
         assertDoesNotThrow(() -> Files.readAllLines(path));
     }
-
 
     @Test
     public void readWorldListWrongFileTest() {
@@ -33,16 +29,15 @@ public class WordGeneratorTest {
 
     @Test
     public void wordListFilePathTest() {
-        assertEquals("src/main/resources/fk/wordleprojekt/ordlista.txt", wordGenerator.getFilePath());
+        assertEquals("src/main/resources/fk/wordleprojekt/ordlista.txt", WordGenerator.getFilePath());
     }
-
 
     @Test
     public void allWordsAreExactlyFiveCharactersLongTest(){
-        Path path = Paths.get(wordGenerator.getFilePath());
+        Path path = Paths.get(WordGenerator.getFilePath());
         List<String> words;
-        wordGenerator.readWordsFromFile(path);
-        words = wordGenerator.getWords();
+        WordGenerator.readWordsFromFile(path);
+        words = WordGenerator.getWords();
 
         for (String word : words) {
             assertEquals(5, word.length(), "Det här ordet är inte 5 tecken: " + word);
@@ -65,7 +60,4 @@ public class WordGeneratorTest {
 
         assertNotEquals(word1, word2);
     }
-
-
-
 }

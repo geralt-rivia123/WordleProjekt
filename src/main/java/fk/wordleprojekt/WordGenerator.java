@@ -28,6 +28,7 @@ public class WordGenerator {
 
     public static void generateRandomWord(){
         readWordsFromFile(path);
+        //randomWord = "tvätt";
 
         Random random = new Random();
         int randomIndex;
@@ -35,6 +36,7 @@ public class WordGenerator {
                 randomIndex = random.nextInt(words.size());
         } while (words.get(randomIndex).equals(randomWord)); // Fortsätt tills ett annat ord än det förra har valts
         randomWord = words.get(randomIndex);
+
     }
 
     public static List<String> getWords() {
