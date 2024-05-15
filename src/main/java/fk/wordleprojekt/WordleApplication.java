@@ -19,9 +19,10 @@ public class WordleApplication extends Application {
         stage.setScene(scene);
         stage.show();
 
-        GameManager gameManager = GameManager.getInstance();
-        WordleController controller = new WordleController();
-        gameManager.startNewGame();
+
+        //GameManager.startNewGame();
+
+        //WordleController controller = new WordleController();
         System.out.println(WordGenerator.getGeneratedWord());
 
     }

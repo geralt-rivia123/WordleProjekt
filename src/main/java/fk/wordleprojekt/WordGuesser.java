@@ -66,7 +66,6 @@ public class WordGuesser {
         return guess.length() == 5;
     }
 
-
     public static List<Pair<Integer, String>> getGreenCharacters() {
         return greenCharacters;
     }
