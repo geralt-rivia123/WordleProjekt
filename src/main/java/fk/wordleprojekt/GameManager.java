@@ -1,5 +1,7 @@
 package fk.wordleprojekt;
 
+import fk.wordleprojekt.data.WordGenerator;
+
 public class GameManager {
 
     private static int currentRound;

@@ -19,7 +19,7 @@
          <Insets left="300.0" right="300.0" top="25.0" />
       </VBox.margin>
    </HBox>
-   <Label fx:id="infoLabel" prefHeight="45.0" prefWidth="600.0" />
+   <Label fx:id="infoLabel" prefHeight="45.0" prefWidth="600.0" contentDisplay="CENTER" alignment="CENTER"/>
 
    <HBox fx:id="labelRowRoundOne" alignment="CENTER" prefHeight="80.0" prefWidth="200.0">
       <children>

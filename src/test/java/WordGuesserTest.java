@@ -1,14 +1,8 @@
-import fk.wordleprojekt.WordGenerator;
-import fk.wordleprojekt.WordGuesser;
+import fk.wordleprojekt.data.WordGenerator;
 import org.junit.jupiter.api.Test;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.*;
 public class WordGuesserTest {

@@ -1,4 +1,4 @@
-package fk.wordleprojekt;
+package fk.wordleprojekt.data;
 
 
 import java.io.*;

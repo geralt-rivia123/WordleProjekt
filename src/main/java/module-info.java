@@ -8,4 +8,8 @@ module fk.wordleprojekt {
     exports fk.wordleprojekt;
     exports fk.wordleprojekt.controllers;
     opens fk.wordleprojekt.controllers to javafx.fxml;
+    exports fk.wordleprojekt.data;
+    opens fk.wordleprojekt.data to javafx.fxml;
+    exports fk.wordleprojekt.data.characters;
+    opens fk.wordleprojekt.data.characters to javafx.fxml;
 }

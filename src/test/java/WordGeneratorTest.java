@@ -1,4 +1,4 @@
-import fk.wordleprojekt.WordGenerator;
+import fk.wordleprojekt.data.WordGenerator;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
