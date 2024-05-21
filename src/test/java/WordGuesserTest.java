@@ -1,24 +1,19 @@
 import fk.wordleprojekt.data.WordGenerator;
+import fk.wordleprojekt.data.WordGuesser;
+import fk.wordleprojekt.exceptions.GuessTooShortException;
+import fk.wordleprojekt.exceptions.InvalidGuessException;
+import fk.wordleprojekt.exceptions.WordNotInListException;
+import fk.wordleprojekt.exceptions.WordNotInListException;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 public class WordGuesserTest {
 
-
-
-    @Test
-    public void correctGuessTest() {
-        WordGenerator.generateRandomWord();
-
-
-
-
-        //System.out.println(guess);
-
-    }
 
     @Test
     public void incorrectGuessTest() {
@@ -30,19 +25,27 @@ public class WordGuesserTest {
     }
 
     @Test
-    public void doesGuessExistInListTest() {
-        WordGenerator.readWordsFromFile(Paths.get(WordGenerator.getFilePath()));
-        List<String> wordList = WordGenerator.getWords();
+    public void doesGuessNotExistInListTest() {
+        WordGenerator.generateRandomWord();
 
         String guess = "albin";
 
-        for(String word : wordList) {
-            assertNotEquals(guess, word);
-        }
+        assertThrows(WordNotInListException.class,
+                () -> WordGuesser.guess(guess),
+                "Förväntade exception att kastas");
 
     }
 
+    @Test
+    public void isGuessShorterThanFiveCharactersTest() {
+        WordGenerator.generateRandomWord();
 
+        String guess = "har";
 
+        assertThrows(GuessTooShortException.class,
+                () -> WordGuesser.guess(guess),
+                "Förväntade exception att kastas");
+
+    }
 
 }

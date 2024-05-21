@@ -77,11 +77,11 @@ public class WordGuesser {
 
     }
 
-    private static boolean doesWordExistInList(String guess) {
+    public static boolean doesWordExistInList(String guess) {
         return WordGenerator.getWords().contains(guess);
     }
 
-    private static boolean isGuessFiveCharactersLong(String guess) {
+    public static boolean isGuessFiveCharactersLong(String guess) {
         return guess.length() == 5;
     }
 

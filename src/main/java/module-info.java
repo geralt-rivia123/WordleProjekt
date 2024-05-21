@@ -12,4 +12,5 @@ module fk.wordleprojekt {
     opens fk.wordleprojekt.data to javafx.fxml;
     exports fk.wordleprojekt.data.characters;
     opens fk.wordleprojekt.data.characters to javafx.fxml;
+    exports fk.wordleprojekt.exceptions;
 }
