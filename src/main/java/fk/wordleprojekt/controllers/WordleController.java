@@ -180,8 +180,6 @@ public class WordleController {
                 labels.add(label);
                 defaultLabelStyle = label.getStyle();
             }
-
-
         }
         return labels;
     }
@@ -242,6 +240,17 @@ public class WordleController {
             errorAlert.showAndWait();
         }
 
+        if(GameManager.getWinStatus()) {
+            disableInput(true);
+            infoLabel.setText("Grattis! Du vann!");
+        }
+
+        if(GameManager.getCurrentRound() == 7 && !GameManager.getWinStatus()) {
+            disableInput(true);
+            infoLabel.setText("Du förlorade. Försök igen med ett nytt ord!");
+        }
+
+
 
     }
 
@@ -254,21 +263,6 @@ public class WordleController {
             boolean isYellow = false;
 
             // Kontrollera gröna tecken först
-
-            /*
-            for (String character : WordGuesser.getGreenCharacters().values()) {
-                if (buttonText.equalsIgnoreCase(character)) {
-                    //if (!currentColor.contains("green")) {
-                    //  button.setStyle("-fx-background-color: green");
-                    //}
-                    button.setStyle("-fx-background-color: green");
-                    isGreen = true;
-                    break;
-                }
-            }
-
-             */
-
             for(GreenCharacter greenCharacter : WordGuesser.getGreenCharacters()) {
                 if (buttonText.equalsIgnoreCase(String.valueOf(greenCharacter.getCharacter()))) {
                     button.setStyle("-fx-background-color: " + greenCharacter.getColor());
@@ -278,65 +272,7 @@ public class WordleController {
             }
 
 
-
-
-            /*
-            for (Pair<Integer, String> character : WordGuesser.getGreenCharacters()) {
-                if (buttonText.equalsIgnoreCase(character.getValue())) {
-                    //if (!currentColor.contains("green")) {
-                      //  button.setStyle("-fx-background-color: green");
-                    //}
-                    button.setStyle("-fx-background-color: green");
-                    isGreen = true;
-                    break;
-                }
-            }
-
-             */
-
-
-
-
-
             // Om inte grön, kontrollera gula tecken
-
-
-            /*
-            if (!isGreen) {
-                for (Pair<Integer, String> character : WordGuesser.getYellowCharacters()) {
-                    if (buttonText.equalsIgnoreCase(character.getValue()))  {
-                        if (!currentColor.contains("yellow") && !currentColor.contains("green")) {
-                            button.setStyle("-fx-background-color: yellow");
-                        }
-                        isYellow = true;
-                        break;
-                    }
-                }
-            }
-
-             */
-
-
-
-
-
-
-
-            /*
-            if (!isGreen) {
-                for (String character : WordGuesser.getYellowCharacters().values()) {
-                    if (buttonText.equalsIgnoreCase(character))  {
-                        if (!currentColor.contains("yellow") && !currentColor.contains("green")) {
-                            button.setStyle("-fx-background-color: yellow");
-                        }
-                        isYellow = true;
-                        break;
-                    }
-                }
-            }
-
-             */
-
             if (!isGreen) {
                 for (YellowCharacter yellowCharacter : WordGuesser.getYellowCharacters()) {
                     if (buttonText.equalsIgnoreCase(String.valueOf(yellowCharacter.getCharacter())))  {
@@ -349,39 +285,7 @@ public class WordleController {
                 }
             }
 
-
-
-
-
-
             // Om varken grön eller gul
-            /*
-            if (!isGreen && !isYellow) {
-                for (Pair<Integer, String> character : WordGuesser.getRedCharacters()) {
-                    if (buttonText.equalsIgnoreCase(character.getValue()))  {
-                        button.setStyle("-fx-background-color: red");
-                    }
-                }
-            }
-
-             */
-
-
-
-
-
-            /*
-
-            if (!isGreen && !isYellow) {
-                for (String character : WordGuesser.getRedCharacters().values()) {
-                    if (buttonText.equalsIgnoreCase(character))  {
-                        button.setStyle("-fx-background-color: red");
-                    }
-                }
-            }
-
-             */
-
             if (!isGreen && !isYellow) {
                 for (RedCharacter redCharacter : WordGuesser.getRedCharacters()) {
                     if (buttonText.equalsIgnoreCase(String.valueOf(redCharacter.getCharacter())))  {
@@ -389,8 +293,6 @@ public class WordleController {
                     }
                 }
             }
-
-
 
         }
 
@@ -409,90 +311,12 @@ public class WordleController {
         for (RedCharacter redCharacter : WordGuesser.getRedCharacters()) {
             getCurrentLabels().get(redCharacter.getPosition()).setStyle("-fx-background-color: " + redCharacter.getColor());
         }
-
-        for(Label label : getCurrentLabels()) {
-
-
-            /*
-            for(Pair<Integer,String> character : WordGuesser.getGreenCharacters())
-            {
-                if(label.getText().equalsIgnoreCase(character.getValue()) && getCurrentLabels().indexOf(label) == character.getKey()) {
-
-                    label.setStyle("-fx-background-color: green");
-                }
-            }
-
-             */
-
-            /*
-            for(Map.Entry<Integer,String> character : WordGuesser.getGreenCharacters().entrySet())
-            {
-                if(getCurrentLabels().indexOf(label) == character.getKey()) {
-                    label.setStyle("-fx-background-color: green");
-                }
-            }
-
-             */
-
-
-
-
-
-
-            /*
-            for(Pair<Integer,String> character : WordGuesser.getYellowCharacters())
-            {
-                if(label.getText().equalsIgnoreCase(character.getValue()) && getCurrentLabels().indexOf(label) == character.getKey()) {
-
-                    label.setStyle("-fx-background-color: yellow");
-                }
-            }
-
-             */
-
-            /*
-            for(Map.Entry<Integer,String> character : WordGuesser.getYellowCharacters().entrySet())
-            {
-                if(getCurrentLabels().indexOf(label) == character.getKey()) {
-                    label.setStyle("-fx-background-color: yellow");
-                }
-            }
-
-             */
-
-
-
-
-            /*
-            for(Pair<Integer,String> character : WordGuesser.getRedCharacters())
-            {
-                if(label.getText().equalsIgnoreCase(character.getValue()) && getCurrentLabels().indexOf(label) == character.getKey()) {
-                    label.setStyle("-fx-background-color: red");
-                }
-            }
-
-             */
-
-            /*
-            for(Map.Entry<Integer,String> character : WordGuesser.getRedCharacters().entrySet())
-            {
-                if(getCurrentLabels().indexOf(label) == character.getKey()) {
-                    label.setStyle("-fx-background-color: red");
-                }
-            }
-
-             */
-
-
-
-
-
-        }
     }
 
     private void reset() {
         GameManager.startNewGame();
         clearUi();
+        disableInput(false);
         System.out.println(WordGenerator.getGeneratedWord());
 
     }
@@ -508,6 +332,14 @@ public class WordleController {
         }
 
         infoLabel.setText("Startade ny runda med svårighetsgrad " + GameManager.getDifficulty() + getDifficultyHint());
+    }
+
+    private void disableInput(boolean status) {
+        for (Button button : buttons) {
+            button.setDisable(status);
+        }
+        buttonEnter.setDisable(status);
+        buttonErase.setDisable(status);
     }
 
     private List<Label> getAllLabels() {
