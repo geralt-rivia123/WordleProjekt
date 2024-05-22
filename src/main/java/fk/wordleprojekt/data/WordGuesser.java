@@ -81,7 +81,6 @@ public class WordGuesser {
                     if (!foundYellow) {
                         redCharacters.add(new RedCharacter(i,c));
                     }
-                    System.out.println("{ " + matched[0] + " " + matched[1] + " " + matched[2] + " " + matched[3] + " " + matched[4] + " " + "}");
                 }
             }
         }

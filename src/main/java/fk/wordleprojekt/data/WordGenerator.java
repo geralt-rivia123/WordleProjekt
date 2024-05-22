@@ -13,29 +13,14 @@ import java.util.Random;
 public class WordGenerator {
 
     // Sökväg till ordlista
-    //final private static String filePath = "src/main/resources/fk/wordleprojekt/ordlista.txt";
-    private static final String resourcePath = "/fk/wordleprojekt/ordlista.txt";
+    private static final String filePath = "/fk/wordleprojekt/ordlista.txt";
     private static String randomWord = null;
-    //private final static Path path = Paths.get(filePath);
     private static List<String> words;
 
-    public static void readWordsFromFile(Path path) {
-        {
-            try {
-                words = Files.readAllLines(path);
-            } catch (IOException e) {
-                System.out.println("Något gick fel när filen skulle läsas");
-            }
-        }
-    }
-
-
-
-
-    public static void readWordsFromResource() {
+    public static void readWordsFromFile() {
         words = new ArrayList<>();
         //Hämta ordlista från resources
-        try (InputStream inputStream = WordGenerator.class.getResourceAsStream(resourcePath);
+        try (InputStream inputStream = WordGenerator.class.getResourceAsStream(filePath);
              BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8))) {
 
             String line;
@@ -49,9 +34,7 @@ public class WordGenerator {
     }
 
     public static void generateRandomWord(){
-        //readWordsFromFile(path);
-        readWordsFromResource();
-        //randomWord = "tvätt";
+        readWordsFromFile();
 
         Random random = new Random();
         int randomIndex;
@@ -68,8 +51,7 @@ public class WordGenerator {
     }
 
     public static String getFilePath() {
-        //return filePath;
-        return resourcePath;
+        return filePath;
     }
 
     public static String getGeneratedWord() {
