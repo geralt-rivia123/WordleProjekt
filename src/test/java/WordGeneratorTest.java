@@ -13,8 +13,8 @@ public class WordGeneratorTest {
 
     @Test
     public void readWordListTest() {
-        Path path = Paths.get(WordGenerator.getFilePath());
-        assertDoesNotThrow(() -> Files.readAllLines(path));
+        //Path path = Paths.get(WordGenerator.getFilePath());
+        assertDoesNotThrow(() -> WordGenerator.readWordsFromResource());
     }
 
     @Test
@@ -29,14 +29,15 @@ public class WordGeneratorTest {
 
     @Test
     public void wordListFilePathTest() {
-        assertEquals("src/main/resources/fk/wordleprojekt/ordlista.txt", WordGenerator.getFilePath());
+        assertEquals("/fk/wordleprojekt/ordlista.txt", WordGenerator.getFilePath());
     }
 
     @Test
     public void allWordsAreExactlyFiveCharactersLongTest(){
-        Path path = Paths.get(WordGenerator.getFilePath());
+        WordGenerator.readWordsFromResource();
+        //Path path = Paths.get(WordGenerator.getFilePath());
         List<String> words;
-        WordGenerator.readWordsFromFile(path);
+        //WordGenerator.readWordsFromFile(path);
         words = WordGenerator.getWords();
 
         for (String word : words) {

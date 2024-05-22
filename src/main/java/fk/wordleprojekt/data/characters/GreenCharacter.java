@@ -12,4 +12,5 @@ public class GreenCharacter extends CharacterStatus {
     public String getColor() {
         return "green";
     }
+
 }

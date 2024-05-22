@@ -250,8 +250,6 @@ public class WordleController {
             infoLabel.setText("Du förlorade. Försök igen med ett nytt ord!");
         }
 
-
-
     }
 
     private void changeButtonColors() {
