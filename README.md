@@ -15,8 +15,6 @@ Funktionella krav
 
 - Det ska vara möjligt att starta ett spel på nytt efter man spelet klart en runda, utan att behöva starta om programmet.
  
-- Fler?
-
 ------------------------
 
 Icke funktionella krav
@@ -29,8 +27,25 @@ Icke funktionella krav
 
 - Tanken är att försöka jobba enligt TDD, enhetstester ska skapas.
 
-- Fler?
-
-
 ------------------------
 Bygga och starta projektet:
+
+Se till att ha JDK 21 eller senare installerat https://www.oracle.com/se/java/technologies/downloads/
+
+Kör projektet i en IDE:
+Föreslår Intellij, då projektet är byggt i den IDE:n https://www.jetbrains.com/idea/download/?section=windows
+Öppna projektet och leta dig fram till main-klassen src/main/java/fk/wordleprojekt/Main.java högerklicka Main "Run Main.main()"
+
+Bygg och kör JAR i Intellij
+
+Bygg:
+Fle -> Project strucuture 
+-> Artifacts + JAR 
+-> From module with dependencies Main class: Main 
+-> Apply
+Build -> Build artifacts
+
+Kör JAR:
+
+out/artifacts/WordleProjekt_jar högerklicka Wordleprojekt.jar "run"
+Alternativt skriv java -jar "Wordleprojekt.jar" i kommandotolken.
