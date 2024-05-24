@@ -25,6 +25,15 @@ public class WordGuesserTest {
     }
 
     @Test
+    public void correctGuessTest() {
+        WordGenerator.generateRandomWord();
+        String generatedWord = WordGenerator.getGeneratedWord();
+
+        assertDoesNotThrow(() -> WordGuesser.guess(generatedWord),
+                "Ingen exception borde kastas för en korrekt gissning");
+    }
+
+    @Test
     public void doesGuessNotExistInListTest() {
         WordGenerator.generateRandomWord();
 

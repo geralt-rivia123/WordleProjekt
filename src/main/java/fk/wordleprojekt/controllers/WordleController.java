@@ -192,7 +192,7 @@ public class WordleController {
 
         // Kontrollera om en tom label hittades
         if (firstEmptyLabel.isPresent()) {
-            Label emptyLabel = firstEmptyLabel.get();
+            Label emptyLabel = firstEmptyLabel.get();;
             emptyLabel.setText(text);
             emptyLabel.setStyle("-fx-border-width: 2px; " + "-fx-border-color: black;");
         } else {
@@ -204,6 +204,7 @@ public class WordleController {
         Optional <Label> lastLabelWithText = getCurrentLabels().stream()
                 .filter(label -> !label.getText().isEmpty()) // Filter för label med text
                 //Hämta senaste
+                //tar två element i taget från streamen och returnerar alltid det andra elementet
                 .reduce((first, second) -> second);
 
         // Kontrollera om en label med text hittades
@@ -216,18 +217,18 @@ public class WordleController {
     }
 
     private void guess() {
-        StringBuilder word = new StringBuilder();
+        StringBuilder guess = new StringBuilder();
         for(Label label : getCurrentLabels()) {
-            word.append(label.getText());
+            guess.append(label.getText());
         }
 
         try
         {
-            WordGuesser.guess(String.valueOf(word).toLowerCase());
+            WordGuesser.guess(String.valueOf(guess).toLowerCase());
             changeLabelColors();
             changeButtonColors();
 
-            System.out.println("du gissade " + word);
+            System.out.println("du gissade " + guess);
             System.out.println("rätt svar är "+ WordGenerator.getGeneratedWord());
 
             GameManager.setCurrentRound(GameManager.getCurrentRound() + 1);
