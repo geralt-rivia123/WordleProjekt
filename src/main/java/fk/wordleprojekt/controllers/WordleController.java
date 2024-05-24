@@ -192,7 +192,7 @@ public class WordleController {
 
         // Kontrollera om en tom label hittades
         if (firstEmptyLabel.isPresent()) {
-            Label emptyLabel = firstEmptyLabel.get();;
+            Label emptyLabel = firstEmptyLabel.get();
             emptyLabel.setText(text);
             emptyLabel.setStyle("-fx-border-width: 2px; " + "-fx-border-color: black;");
         } else {
